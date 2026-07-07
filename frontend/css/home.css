@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #bbd6fe;
+    --secondary-color: #a8a8b5;
+    --background-color: #0c0105;
+    --text-gradient: linear-gradient(
+        135deg,
+        #bbd6fe 0%,
+        #686a6c 20%,
+        #ffffff 30%,
+        #686a6c 50%,
+        #ffffff 60%,
+        #686a6c 80%,
+        #bbd6fe 100%
+    );
+}
+
+.gradient-text {
+    background: var(--text-gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+.body {
+    background-color: var(--background-color);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 4vh;
+    padding: 8vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+}
+
+.header img {
+    height: 35vh;
+    filter: hue-rotate(180deg);
+    opacity: 85%;
+}
+
+.header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 10vh;
+}
+
+.header p {
+    font-size: 6vh;
+}
+
+.nav {
+    margin: 5vh 0 8vh 0;
+}
+
+.nav ul {
+    display: inline-flex;
+    gap: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-gradient);
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+.main p {
+    text-align: justify;
+}
+
+.highlights {
+    margin: 5vh 0 8vh 0;
+}
+
+.highlights h2 {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.carousel-images {
+    width: 60vw;
+    height: 65vh;
+
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+
+    width: 50vh;
+    height: auto;
+
+    object-fit: cover;
+
+    /* border-radius: 10px; */
+    border: 8px solid #cde1ff9f;
+    border-image: var(--text-gradient) 1;
+    clip-path: inset(0 round 10px);
+}
+
+.slide.active {
+    display: block;
+}
+
+.carousel button {
+    width: 1.5em;
+    height: 1.5em;
+
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+
+    font-size: 1.8em;
+    cursor: pointer;
+    background: var(--text-gradient);
+    color: var(--background-color);
+}
+
+.carousel button:hover {
+    background: var(--background-color);
+    color: var(--secondary-color);
+}
