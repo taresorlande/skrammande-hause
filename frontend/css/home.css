@@ -168,7 +168,6 @@
 
 .columns {
     display: flex;
-    gap: 1vw;
     justify-content: space-between;
 }
 
@@ -177,15 +176,15 @@
     flex-wrap: wrap;
 }
 
-.columns .column {
+.column {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 0.3vw;
 }
 
 .picture {
     display: flex;
-    width: 30vw;
+    width: 23vw;
     height: auto;
 
     object-fit: cover;
@@ -228,9 +227,7 @@
     }
 
     .column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        gap: 1.5vw;
     }
 
     .column .picture {
