@@ -14,25 +14,23 @@
 <body class="body" onload="init()">
     <header class="header" id="home">
         <div>
-            <img src="../img/brasao.png" alt="Brasão da Skrämmande Häuse">
+            <img src="../ico/brasao.png" alt="Brasão da Skrämmande Häuse">
         </div>
         <div>
             <h1 class="gradient-text" >Skrämmande Häuse</h1>
             <p class="gradient-text">𓂃🖌 Galeria de Arte Clássica</p>
         </div>
-        <!-- <div>
-            <img src="../img/brasao.png" alt="Brasão da Skrämmande Häuse">
-        </div> -->
-    </header>
 
-    <nav class="nav">
-        <ul class="gradient-text">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#highlights">Destaques</a></li>
-            <li><a href="#galery">Galeria</a></li>
-            <li><a href="#contacts">Contatos</a></li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <ul class="gradient-text">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contacts">Contatos</a></li>
+            </ul>
+        </nav>
+
+    </header>
 
     <main class="main">
 
@@ -49,20 +47,46 @@
         </section>
 
         <section id="highlights" class="highlights">
-
             <p class="gradient-text">Obras em Destaque</p>
             <div class="carousel">
-                <button onclick="previousImage()">❮</button>
+                <button class="button" onclick="previousImage()">❮</button>
 
-                <img class="slide active" src="../img/beladonna.png" alt="brasao">
-                <img class="slide" src="../img/lycan.png" alt="brasoa">
-                <img class="slide" src="../img/reflexive.png" alt="brasao">
+                <img class="slide active" src="../img/goth-beladonna.png" alt="brasao">
+                <img class="slide" src="../img/goth-lycan.png" alt="brasoa">
+                <img class="slide" src="../img/goth-reflexive.png" alt="brasao">
                 <!-- <img class="slide" src="../img/brasoa.png" alt="brasoa"> -->
 
-                <button onclick="nextImage()">❯</button>
+                <button class="button" onclick="nextImage()">❯</button>
             </div>
 
         </section>
+
+        <section class="gallery" id="gallery">
+            <p class="gradient-text">Galeria</p>
+
+            <section class="columns">
+                <div class="column">
+                    <img src="../img/smoke-industry.jpg" alt="" class="picture">
+                    <img src="../img/smoke-london-watch.jpg" alt="" class="picture">
+                    <img src="../img/smoke-rails.jpg" alt="" class="picture">
+                </div>
+                <div class="column">
+                    <img src="../img/fantasy-bridges.jpg" alt="" class="picture">
+                    <img src="../img/fantasy-castle.jpg" alt="" class="picture">
+                    <img src="../img/fantasy-evening.jpg" alt="" class="picture">
+                </div>
+                <div class="column">
+                    <img src="../img/serena-bridge.jpg" alt="" class="picture">
+                    <img src="../img/serena-lost-princcess.jpg" alt="" class="picture">
+                    <img src="../img/serena-reader.jpg" alt="" class="picture">
+                </div>
+            </section>
+
+        </section>
+
+        <div class="return">
+            <button class="button" onclick="location.href='#home'">▲</button>
+        </div>
     </main>
 
     <footer></footer>

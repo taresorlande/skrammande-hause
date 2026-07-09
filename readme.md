@@ -4,10 +4,18 @@ A Skrämmande Häuse é uma casa onde os limites entre o vivo e o inanimado deix
 
 ### Checklist
 
-- Lightbox nas Imagens.
-- Hover com Scale nas Imagens.
+- Imagens:
+    - Lightbox nas Imagens.
+    - Hover com Scale nas Imagens.
+    - Colocar Scroll Transition (Intersection Observer)
 - Funcionalidade Galeria.
+    - Gerar / Encontrar Imagens para o o projeto.
 - Funcionalidade Footer.
     - Informações de Contato.
-- Mexer na responsividade.
+    - Iframe Google API (Geo Localização)
+    - Botão de voltar ao topo
 - API Wrapping AI.
+
+alvorescer dourado
+rosa cruz
+estrela de prata
