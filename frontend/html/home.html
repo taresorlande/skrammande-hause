@@ -15,7 +15,7 @@
 <body class="body" onload="init()">
     <header class="header" id="home">
         <div>
-            <img src="../ico/brasao.png" alt="Brasão da Skrämmande Häuse">
+            <img src="../ico/brasao.png" alt="Brasão da Skrämmande Häuse" onclick="openLightbox(this)">
         </div>
         <div>
             <h1 class="gradient-text">Skrämmande Häuse</h1>
@@ -52,9 +52,9 @@
             <div class="carousel">
                 <button class="button" onclick="previousImage()">❮</button>
 
-                <img class="slide active" src="../img/goth-beladonna.png" alt="brasao">
-                <img class="slide" src="../img/goth-lycan.png" alt="brasoa">
-                <img class="slide" src="../img/goth-reflexive.png" alt="brasao">
+                <img class="slide active" src="../img/goth-beladonna.png" onclick="openLightbox(this)">
+                <img class="slide" src="../img/goth-lycan.png" onclick="openLightbox(this)">
+                <img class="slide" src="../img/goth-reflexive.png" onclick="openLightbox(this)">
                 <!-- <img class="slide" src="../img/brasoa.png" alt="brasoa"> -->
 
                 <button class="button" onclick="nextImage()">❯</button>
@@ -67,28 +67,27 @@
 
             <section class="columns">
                 <div class="column">
-                    <img src="../img/smoke-industry.jpg" alt="" class="picture">
-                    <img src="../img/smoke-london-watch.jpg" alt="" class="picture">
-                    <img src="../img/smoke-rails.jpg" alt="" class="picture">
+                    <img src="../img/smoke-industry.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/smoke-london-watch.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/smoke-rails.jpg" alt="" class="picture" onclick="openLightbox(this)">
                 </div>
                 <div class="column">
-                    <img src="../img/fantasy-bridges.jpg" alt="" class="picture">
-                    <img src="../img/fantasy-castle.jpg" alt="" class="picture">
-                    <img src="../img/fantasy-evening.jpg" alt="" class="picture">
+                    <img src="../img/fantasy-bridges.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/fantasy-castle.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/fantasy-evening.jpg" alt="" class="picture" onclick="openLightbox(this)">
                 </div>
                 <div class="column">
-                    <img src="../img/witcher-lucrev-my-lost.jpg" alt="" class="picture">
-                    <img src="../img/witcher-the-artist.jpg" alt="" class="picture">
-                    <img src="../img/witcher-forgotten.jpg" alt="" class="picture">
+                    <img src="../img/witcher-lucrev-my-lost.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/witcher-the-artist.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/witcher-forgotten.jpg" alt="" class="picture" onclick="openLightbox(this)">
 
                 </div>
                 <div class="column">
-                    <img src="../img/serena-lost-princcess.jpg" alt="" class="picture">
-                    <img src="../img/serena-the-coroation.jpg" alt="" class="picture">
-                    <img src="../img/serena-bridge.jpg" alt="" class="picture">
+                    <img src="../img/serena-lost-princcess.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/serena-the-coroation.jpg" alt="" class="picture" onclick="openLightbox(this)">
+                    <img src="../img/serena-bridge.jpg" alt="" class="picture" onclick="openLightbox(this)">
                 </div>
             </section>
-
         </section>
 
     </main>
@@ -110,10 +109,18 @@
             <h2>Skrämmande Häuse</h2>
             <div class="contacts">
                 <ul>
-                    <li><p><strong>Endereço: </strong>Rua Paineiras, 1300 - Eldorado, Contagem - MG - CEP: 32410-400</p></li>
-                    <li><p><strong>Telefone: </strong>0800 724 4440 ou (31) 3048-9800</p></li>
-                    <li><p><strong>Horário </strong>Terça a Domingo - 8h às 22h</p></li>
-                    <li><p><strong>Email: </strong>centralcontagem@mg.senac.br</p></li>
+                    <li>
+                        <p><strong>Endereço: </strong>Rua Paineiras, 1300 - Eldorado, Contagem - MG - CEP: 32410-400</p>
+                    </li>
+                    <li>
+                        <p><strong>Telefone: </strong>0800 724 4440 ou (31) 3048-9800</p>
+                    </li>
+                    <li>
+                        <p><strong>Horário </strong>Terça a Domingo - 8h às 22h</p>
+                    </li>
+                    <li>
+                        <p><strong>Email: </strong>centralcontagem@mg.senac.br</p>
+                    </li>
                 </ul>
             </div>
             <!-- <div class="social">
@@ -128,10 +135,14 @@
                 <p>Skrämmande Häuse</p>
                 <!-- <p>Todos os direitos reservados</p> -->
             </div>
-
         </section>
 
     </footer>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img src="" alt="" class="lightboxImg" id="lightboxImg">
+    </div>
 
 </body>
 
