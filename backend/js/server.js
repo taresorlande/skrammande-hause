@@ -1,12 +1,12 @@
 import express from "express";
 import multer from "multer";
 
-const PORT = 3000
+const PORT = 3000;
 const app = express();
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "app/tmp");
+        cb(null, "tmp");
     },
     filename: (req, file, cb) => {
         const data = new Date().toISOString().replace(/\D/g, "");
@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.use(express.static("app/tmp"));
+app.use(express.static("tmp"));
 
 app.get("/test", (req, res) => {
     return res.status(200).json ({
@@ -34,11 +34,12 @@ app.post("/upload", upload.single("image"), (req, res) =>{
         });
     }
     else {
+        const uri = `${req.protocol}://${req.get("host")}`;
         res.status(201).json({
             success: true,
             message: "Imagem enviada com sucesso.",
             file: req.file.filename,
-            url: `http://localhost:${PORT}/${req.file.filename}`
+            url: `${uri}/${req.file.filename}`
         });
     }
 });
