@@ -39,9 +39,11 @@ app.get("/upload", (req, res) => {
         const images = files
             .filter(file => !file.startsWith(".")) // elimina arquivos ocultos
             .sort((a,b) => b.localeCompare(a)); // ordena desc
+        
+        const uri = `${req.protocol}://${req.get("host")}`;
 
         res.status(200).json({
-            images
+            images: images.map(image => `${uri}/${image}`)
         });
     });
 });
