@@ -4,14 +4,15 @@ A Skrämmande Häuse é uma casa onde os limites entre o vivo e o inanimado deix
 
 ### Checklist
 
-- Imagens:
-    - Hover com Scale nas Imagens.
-    - Colocar Scroll Transition (Intersection Observer)
 - API Wrapping AI.
 - Pagina de Upar Imagens
 - Documentação
-- Links das redes Sociais e dos contatos
 
-alvorescer dourado
-rosa cruz
-estrela de prata
+- Instalar e ciar coleções com POSTMAN
+
+- Nomes Galerias
+    - alvorescer dourado
+    - rosa cruz
+    - estrela de prata
+
+- Criar uma function que pega todos os arquivos na pasta tmp e traz um lista em ordem alfabetica, os ultimos adicionado aparecem em primeiro na lista
