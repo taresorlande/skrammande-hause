@@ -1,5 +1,6 @@
 import express from "express";
 import multer from "multer";
+import fs from "fs";
 
 const PORT = 3000;
 const app = express();
@@ -24,6 +25,25 @@ app.get("/test", (req, res) => {
     return res.status(200).json ({
         status: "Ok"
     })
+});
+
+app.get("/upload", (req, res) => {
+    fs.readdir("tmp", (error, files) => {
+        if (error) {
+            return res.status(500).json({
+                success: false,
+                message: "Erro ao listar imagens."
+            });
+        }
+
+        const images = files
+            .filter(file => !file.startsWith(".")) // elimina arquivos ocultos
+            .sort((a,b) => b.localeCompare(a)); // ordena desc
+
+        res.status(200).json({
+            images
+        });
+    });
 });
 
 app.post("/upload", upload.single("image"), (req, res) =>{
