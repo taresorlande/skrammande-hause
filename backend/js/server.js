@@ -6,7 +6,7 @@ const app = express();
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "/app/tmp");
+        cb(null, "app/tmp");
     },
     filename: (req, file, cb) => {
         const data = new Date().toISOString().replace(/\D/g, "");
@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.use(express.static("/app/tmp"));
+app.use(express.static("app/tmp"));
 
 app.get("/test", (req, res) => {
     return res.status(200).json ({
