@@ -15,4 +15,6 @@ A Skrämmande Häuse é uma casa onde os limites entre o vivo e o inanimado deix
     - rosa cruz
     - estrela de prata
 
+- Estilizar botão de input file
+
 - Criar uma function que pega todos os arquivos na pasta tmp e traz um lista em ordem alfabetica, os ultimos adicionado aparecem em primeiro na lista
