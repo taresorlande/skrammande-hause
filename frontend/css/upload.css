@@ -8,11 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3vw;
-}
 
-.upload p {
-    text-align: center;
+    p {
+        text-align: center;
+    }
 }
 
 .dropzone {
@@ -26,22 +25,71 @@
 
     cursor: pointer;
     transition: 0.25s;
-
     text-align: center;
+
+    .upload-message {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vw;
+        margin-bottom: 1vw;
+
+        i {
+            font-size: 6vw;
+        }
+    }
+
+    &.drag {
+        transform: scale(1.05);
+    }
 }
 
-.dropzone input {
-    margin-top: 5vw;
-    text-align: center;
+.preview {
+    width: 20vw;
+    max-width: 100%;
+    margin: 2vw;
+
+    border: 0.5vw solid #cde1ff9f;
+    border-image: var(--text-gradient) 1;
+    clip-path: inset(0 round 10px);
+
+    object-fit: cover;
 }
 
-.dropzone.drag {
-    transform: scale(1.02);
-}
+.upload-image {
+    font-size: 2.5vw;
+    font-weight: bold;
 
+    padding: .5vw;
+    margin: 0 0 3vw 0;
+
+    background: var(--text-gradient);
+    color: var(--background-color);
+
+    border: 0.3vw solid #cde1ff9f;
+    border-image: var(--text-gradient) 1;
+    clip-path: inset(0 round 10px);
+
+    font-family: 'Cormorant Garamond', serif;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--background-color);
+
+        background-image: var(--text-gradient);
+        background-clip: text;
+
+        color: transparent;
+    }
+    &:disabled {
+        opacity: .5;
+    }
+}
 
 @media (max-width: 640px) {
-    .dropzone p {
-        font-size: 3vw;
+    .dropzone {
+        p {
+            font-size: 3vw;
+        }
     }
 }

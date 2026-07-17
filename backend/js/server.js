@@ -1,9 +1,10 @@
 import express from "express";
 import multer from "multer";
+import cors from "cors";
 import fs from "fs";
 
-const PORT = 3000;
 const app = express();
+app.use(cors());
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -66,6 +67,7 @@ app.post("/upload", upload.single("image"), (req, res) =>{
     }
 });
 
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

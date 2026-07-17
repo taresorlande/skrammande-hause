@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Explore a Skrämmande Häuse, uma galeria de arte de estética vitoriana onde pinturas clássicas transcendem o tempo. Descubra obras imersivas, artistas renomados e uma experiência única entre o passado e o sobrenatural." />
-     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+    <meta name="description" content="Explore a Skrämmande Häuse, uma galeria de arte de estética vitoriana onde pinturas clássicas transcendem o tempo. Descubra obras imersivas, artistas renomados e uma experiência única entre o passado e o sobrenatural." />
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
     <link rel="shortcut icon" href="../ico/pallete.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/upload.css">
+
+    <script src="../js/upload.js"></script>
     <title>Skrämmande Häuse</title>
 </head>
 
@@ -25,34 +29,50 @@
 
         <nav class="nav">
             <ul class="gradient-text">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#highlights">Destaques</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#address">Contatos</a></li>
+                <li><a href="home.html#home">Início</a></li>
+                <li><a href="home.html#highlights">Destaques</a></li>
+                <li><a href="home.html#gallery">Galeria</a></li>
+                <li><a href="upload.html#info">Contatos</a></li>
+                <li><a href="upload.html#upload">Postar</a></li>
             </ul>
         </nav>
 
     </header>
 
     <main class="main">
-        <section class="upload">
+        <section class="upload" id="upload">
             <p class="title gradient-text">Enviar</p>
 
-            <div class="dropzone gradient-text" id="dropzone">
-                <p>Arraste uma imagem</p>
-                <p>ou</p>
-                <p>Clique para selecionar</p>
+            <div 
+                class="dropzone gradient-text" 
+                id="dropzone"
+                ondragover="dragOver(event)"
+                ondragleave="dragLeave()"
+                ondrop="dropFile(event)"
+                onclick="selectFile()">
 
-                <input type="file" class="gradient-text" id="file" accept="image/*">
+                <div class="upload-message" id="upload-message">
+                    <p>Arraste uma imagem</p>
+                    <i class="fi fi-rr-upload"></i>
+                    <p>ou</p>
+                </div>
 
+                <img id="preview" class="preview" src="" alt="Preview da imagem" hidden>
                 <div id="status"></div>
+
+                <input type="file" class="gradient-text" id="file" accept="image/*" onchange="showFileName()" hidden>
+                <span id="file-name">Clique para selecionar</span>
+            
             </div>
+            
+            <button class="upload-image" id="upload-image" onclick="uploadImage()" disabled>Enviar Pintura</button>
+
         </section>
     </main>
 
     <footer class="footer">
 
-        <section class="info">
+        <section class="info" id="info">
             <h2>Skrämmande Häuse</h2>
             <div class="contacts">
                 <ul>
@@ -87,8 +107,6 @@
         </section>
 
     </footer>
-
-    <script src="../js/home.js"></script>
 
 </body>
 

@@ -4,17 +4,14 @@ A Skrämmande Häuse é uma casa onde os limites entre o vivo e o inanimado deix
 
 ### Checklist
 
-- API Wrapping AI.
-- Pagina de Upar Imagens
+- API Wrapping AI
 - Documentação
 
 - Instalar e ciar coleções com POSTMAN
 
+- Pesquisar CSS Nesting
+
 - Nomes Galerias
     - alvorescer dourado
-    - rosa cruz
+    - entardecer encantado
     - estrela de prata
-
-- Estilizar botão de input file
-
-- Criar uma function que pega todos os arquivos na pasta tmp e traz um lista em ordem alfabetica, os ultimos adicionado aparecem em primeiro na lista
